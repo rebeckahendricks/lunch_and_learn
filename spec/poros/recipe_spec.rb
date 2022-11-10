@@ -597,7 +597,7 @@ RSpec.describe Recipe do
               {
                   "label": "Vitamin A",
                   "tag": "VITA_RAE",
-                  "schemaOrgTag": null,
+                  "schemaOrgTag": "null",
                   "total": 0.0,
                   "hasRDI": true,
                   "daily": 0.0,
