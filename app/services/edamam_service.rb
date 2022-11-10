@@ -7,8 +7,6 @@ class EdamamService
     parse(response)
   end
 
-  private
-
   def self.conn
     Faraday.new('https://api.edamam.com') do |faraday|
       faraday.params['type'] = 'public'
