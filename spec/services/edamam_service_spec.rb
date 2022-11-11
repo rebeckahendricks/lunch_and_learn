@@ -18,7 +18,7 @@ RSpec.describe EdamamService do
     end
   end
 
-  it 'returns an empty array if no recipes are found' do
+  it 'returns an empty array if no recipes are found', :vcr do
     country = 'abcdefghi'
     search = EdamamService.get_recipes(country)
 

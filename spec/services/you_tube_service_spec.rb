@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe YouTubeService do
-  it 'returns videos about a specific country' do
+  it 'returns videos about a specific country', :vcr do
     country = 'italy'
     search = YouTubeService.get_videos(country)
 
@@ -19,7 +19,7 @@ RSpec.describe YouTubeService do
     expect(search[:items][0][:id][:videoId]).to be_a String
   end
 
-  it 'returns an empty array if no videos are found' do
+  it 'returns an empty array if no videos are found', :vcr do
     country = 'abcdefghi'
     search = YouTubeService.get_videos(country)
 

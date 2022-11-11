@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 describe 'Learning Resources API' do
-  describe 'Happy Path' do
+  describe 'Happy Path', :vcr do
     it 'sends a list of learning resources from a country given by a user' do
-      get '/api/v1/learning_resources?country=laos'
+      get '/api/v1/learning_resources?country=italy'
       resources = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to be_successful
@@ -38,7 +38,7 @@ describe 'Learning Resources API' do
       end
     end
 
-    describe 'Sad Path' do
+    describe 'Sad Path', :vcr do
       it 'returns empty objects if no videos or images are found' do
         get '/api/v1/learning_resources?country=abcdefghijk'
         resources = JSON.parse(response.body, symbolize_names: true)
