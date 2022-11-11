@@ -6,6 +6,6 @@ class Api::V1::RecipesController < ApplicationController
       country = CountryFacade.random_country
     end
     recipes = RecipeFacade.get_recipes(country)
-    render json: RecipeSerializer.new(recipes)
+    render json: RecipeSerializer.serialize(recipes, country)
   end
 end

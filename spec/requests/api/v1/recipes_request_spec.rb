@@ -3,19 +3,15 @@ require 'rails_helper'
 describe 'Recipes API' do
   describe 'Happy Path' do
     it 'sends a list of recipes from a country given by a user' do
-      # attributes_for_list(:recipe, 3, country: 'thailand')
-
       get '/api/v1/recipes?country=thailand'
       recipes = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to be_successful
       expect(recipes[:data]).to be_an Array
 
-      # expect(recipes[:data].count).to eq(3)
-
       recipes[:data].each do |recipe|
         expect(recipe).to have_key(:id)
-        expect(recipe[:id].null?).to eq(true)
+        expect(recipe[:id]).to eq('null')
         expect(recipe).to have_key(:type)
         expect(recipe[:type]).to eq('recipe')
         expect(recipe).to have_key(:attributes)
@@ -28,13 +24,16 @@ describe 'Recipes API' do
         expect(recipe[:attributes][:country]).to be_a String
         expect(recipe[:attributes]).to have_key(:image)
         expect(recipe[:attributes][:image]).to be_a String
-        expect(recipe[:attributes]).to_not have_key() #Check recipe API call and see which attributes are not needed
+
+        expect(recipe[:attributes]).to_not have_key :from
+        expect(recipe[:attributes]).to_not have_key :source
+        expect(recipe[:attributes]).to_not have_key :yield
+        expect(recipe[:attributes]).to_not have_key :healthLabels
       end
     end
 
     it 'sends a list of recipes from a random country if a user does not send in a country' do
       allow(CountryFacade).to receive(:random_country).and_return('Thailand')
-
       get '/api/v1/recipes'
 
       recipes = JSON.parse(response.body, symbolize_names: true)
@@ -57,7 +56,11 @@ describe 'Recipes API' do
         expect(recipe[:attributes][:country]).to be_a String
         expect(recipe[:attributes]).to have_key(:image)
         expect(recipe[:attributes][:image]).to be_a String
-        expect(recipe[:attributes]).to_not have_key() #Check recipe API call and see which attributes are not needed
+
+        expect(recipe[:attributes]).to_not have_key :from
+        expect(recipe[:attributes]).to_not have_key :source
+        expect(recipe[:attributes]).to_not have_key :yield
+        expect(recipe[:attributes]).to_not have_key :healthLabels
       end
     end
   end
