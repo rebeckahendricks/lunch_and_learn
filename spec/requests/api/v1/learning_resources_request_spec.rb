@@ -41,6 +41,7 @@ describe 'Learning Resources API' do
     describe 'Sad Path' do
       it 'returns empty objects if no videos or images are found' do
         get '/api/v1/learning_resources?country=abcdefghijk'
+        resources = JSON.parse(response.body, symbolize_names: true)
 
         expect(response).to be_successful
         expect(resources[:data]).to be_an Array
