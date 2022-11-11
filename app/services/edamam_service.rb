@@ -3,7 +3,7 @@ require 'json'
 
 class EdamamService
   def self.get_recipes(country)
-    response = self.conn.get('/api/recipes/v2', { q: country })
+    response = conn.get('/api/recipes/v2', { q: country })
     parse(response)
   end
 

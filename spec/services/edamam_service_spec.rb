@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe EdamamService do
-  it 'returns recipe data from a specific country' do
+  it 'returns recipe data from a specific country', :vcr do
     country = "thailand"
     search = EdamamService.get_recipes(country)
 

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CountryService do
-  it 'returns a list of all countries' do
+  it 'returns a list of all countries', :vcr do
     search = CountryService.get_countries
 
     expect(search).to be_an Array
