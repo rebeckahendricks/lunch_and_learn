@@ -3,7 +3,7 @@ require 'json'
 
 class CountryService
   def self.get_countries
-    response = self.conn.get('/v3.1/all')
+    response = conn.get('/v3.1/all')
     parse(response)
   end
 

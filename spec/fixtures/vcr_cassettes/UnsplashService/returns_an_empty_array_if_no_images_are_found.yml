@@ -63,9 +63,9 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 11 Nov 2022 23:57:31 GMT
+      - Sat, 12 Nov 2022 04:43:40 GMT
       Age:
-      - '240'
+      - '17409'
       X-Served-By:
       - cache-iad-kcgs7200036-IAD, cache-den8242-DEN
       X-Cache:
@@ -73,11 +73,11 @@ http_interactions:
       X-Cache-Hits:
       - 0, 1
       X-Timer:
-      - S1668211052.582992,VS0,VE3
+      - S1668228220.473428,VS0,VE1
       Vary:
       - Accept-Encoding, Origin,Authorization,Accept-Language,client-geo-region,Accept
     body:
       encoding: ASCII-8BIT
       string: '{"total":0,"total_pages":0,"results":[]}'
-  recorded_at: Fri, 11 Nov 2022 23:57:31 GMT
+  recorded_at: Sat, 12 Nov 2022 04:43:40 GMT
 recorded_with: VCR 6.1.0
