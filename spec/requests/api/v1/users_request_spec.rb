@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Users Request APIs' do
+RSpec.describe 'Users Request API' do
   describe 'Happy Path' do
     it 'creates a user' do
       user_params = {

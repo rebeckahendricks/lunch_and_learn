@@ -3,7 +3,7 @@ class RecipeFacade
     data = EdamamService.get_recipes(country)
     recipes = data[:hits]
     recipes.map do |recipe|
-      Recipe.new(recipe)
+      Recipe.new(recipe, country)
     end
   end
 end
