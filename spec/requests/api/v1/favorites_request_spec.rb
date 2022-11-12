@@ -27,6 +27,12 @@ RSpec.describe 'Favorites Request API' do
       }
 
       expect(favorites_response).to eq(expected_favorites_response)
+
+      created_favorite = Favorite.last
+      expect(created_favorite.country).to eq(recipe.country)
+      expect(created_favorite.recipe_link).to eq(recipe.url)
+      expect(created_favorite.recipe_title).to eq(recipe.title)
+      expect(create_favorite.user_id).to eq(user.id)
     end
   end
 end
