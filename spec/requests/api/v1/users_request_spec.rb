@@ -41,13 +41,19 @@ RSpec.describe 'Users Request APIs' do
   end
 
   describe 'Sad Path' do
+    describe 'API_key is not unique' do
+      it 'will not update a user unless the generated API key is unique' do
+
+      end
+    end
+
     describe 'Email address is not unique' do
       it 'does not create a new user' do
 
       end
 
       it 'returns an error message in the response' do
-        
+
       end
     end
   end
