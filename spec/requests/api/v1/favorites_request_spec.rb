@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'securerandom'
 
 RSpec.describe 'Favorites Request API' do
-  describe 'Happy Path - adds recipes to a favorited list for a user' do
+  describe 'Happy Path - Add Favorites' do
     before :each do
       @user = create(:user)
       @user.generate_api_key
@@ -40,7 +40,7 @@ RSpec.describe 'Favorites Request API' do
     end
   end
 
-  describe 'Sad Path - adds recipes to a favorited list for a user' do
+  describe 'Sad Path - Add Favorites' do
     describe 'Invalid API key' do
       before :each do
         @user = create(:user)
