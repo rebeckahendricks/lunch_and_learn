@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe EdamamService do
   it 'returns recipe data from a specific country', :vcr do
-    country = "thailand"
+    country = 'thailand'
     search = EdamamService.get_recipes(country)
 
     expect(search).to be_a Hash
@@ -16,5 +16,14 @@ RSpec.describe EdamamService do
       expect(recipe[:recipe]).to have_key :image
       expect(recipe[:recipe][:image]).to be_a String
     end
+  end
+
+  it 'returns an empty array if no recipes are found', :vcr do
+    country = 'abcdefghi'
+    search = EdamamService.get_recipes(country)
+
+    expect(search).to be_a Hash
+    expect(search[:hits]).to be_an Array
+    expect(search[:hits]).to eq([])
   end
 end
