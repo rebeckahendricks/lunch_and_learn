@@ -3,15 +3,15 @@ require 'rails_helper'
 RSpec.describe 'Favorites Request API' do
   describe 'Happy Path - adds recipes to a favorited list for a user' do
     before :each do
-      user = create(:user)
-      user.generate_api_key
-      recipe = build(:recipe)
+      @user = create(:user)
+      @user.generate_api_key
+      @recipe = build(:recipe)
 
       request_body = {
-        api_key: user.api_key,
-        country: recipe.country,
-        recipe_link: recipe.url,
-        recipe_title: recipe.title
+        api_key: @user.api_key,
+        country: @recipe.country,
+        recipe_link: @recipe.url,
+        recipe_title: @recipe.title
       }
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
@@ -32,10 +32,10 @@ RSpec.describe 'Favorites Request API' do
 
     it 'creates a favorite resource for the user' do
       created_favorite = Favorite.last
-      expect(created_favorite.country).to eq(recipe.country)
-      expect(created_favorite.recipe_link).to eq(recipe.url)
-      expect(created_favorite.recipe_title).to eq(recipe.title)
-      expect(create_favorite.user_id).to eq(user.id)
+      expect(created_favorite.country).to eq(@recipe.country)
+      expect(created_favorite.recipe_link).to eq(@recipe.url)
+      expect(created_favorite.recipe_title).to eq(@recipe.title)
+      expect(created_favorite.user_id).to eq(@user.id)
     end
   end
 end
