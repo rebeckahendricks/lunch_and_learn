@@ -6,6 +6,7 @@ class Api::V1::UsersController < ApplicationController
       user.update(api_key: api_key)
       render json: UserSerializer.new(user), status: 201
     else
+      render json: ErrorSerializer.invalid_email, status: 400
     end
   end
 

@@ -12,10 +12,10 @@ RSpec.describe 'Users Request APIs' do
 
       post '/api/v1/users', headers: headers, params: JSON.generate(user: user_params)
 
-      user_response = JSON.parse(response.body, symbolize_names: true)
-
       expect(response).to be_successful
       expect(response).to have_http_status(201)
+
+      user_response = JSON.parse(response.body, symbolize_names: true)
 
       expect(user_response).to be_a Hash
       expect(user_response).to have_key :data
@@ -41,19 +41,36 @@ RSpec.describe 'Users Request APIs' do
   end
 
   describe 'Sad Path' do
-    describe 'API_key is not unique' do
-      it 'will not update a user unless the generated API key is unique' do
-
-      end
-    end
-
     describe 'Email address is not unique' do
-      it 'does not create a new user' do
+      before :each do
+        @user1 = create(:user, email: 'same@gmail.com')
 
+        user_params = {
+          name: Faker::Name.name,
+          email: 'same@gmail.com'
+        }
+
+        headers = { 'CONTENT_TYPE' => 'application/json' }
+
+        post '/api/v1/users', headers: headers, params: JSON.generate(user: user_params)
+      end
+
+      it 'does not create a new user' do
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(400)
+
+        expect(User.last.name).to eq(@user1.name)
       end
 
       it 'returns an error message in the response' do
+        user_response = JSON.parse(response.body, symbolize_names: true)
 
+        expected_error_hash = {
+          "message": 'User could not be created',
+          "error": 'Email already exists'
+        }
+
+        expect(user_response).to eq(expected_error_hash)
       end
     end
   end
