@@ -1,7 +1,7 @@
 class RecipeSerializer
-  include JSONAPI::Serializer
+  # include JSONAPI::Serializer
 
-  attributes :title, :url, :image
+  # attributes :title, :url, :image
 
   def self.serialize(recipes, country)
     {
