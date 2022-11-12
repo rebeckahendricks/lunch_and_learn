@@ -1,5 +1,5 @@
 class RecipeSerializer
-  def self.serialize(recipes, country)
+  def self.serialize(recipes)
     {
       "data": recipes.map do |recipe|
         {
@@ -8,7 +8,7 @@ class RecipeSerializer
           "attributes": {
             "title": recipe.title,
             "url": recipe.url,
-            "country": country,
+            "country": recipe.country,
             "image": recipe.image
           }
         }
