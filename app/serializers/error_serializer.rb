@@ -7,9 +7,16 @@ class ErrorSerializer
     }
   end
 
-  def self.invalid_api_key
+  def self.invalid_api_key_create
     {
       "message": 'Favorite could not be added',
+      "error": 'API key is invalid'
+    }
+  end
+
+  def self.invalid_api_key_index
+    {
+      "message": 'Favorites could not be found',
       "error": 'API key is invalid'
     }
   end

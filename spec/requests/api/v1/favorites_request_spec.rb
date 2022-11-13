@@ -46,6 +46,7 @@ RSpec.describe 'Favorites Request API' do
         @user = create(:user)
         @user.generate_api_key
         @recipe = build(:recipe)
+        @favorite = create(:favorite, user_id: @user.id)
         @api_key_with_no_user = SecureRandom.urlsafe_base64(27)
 
         request_body = {
@@ -72,7 +73,7 @@ RSpec.describe 'Favorites Request API' do
       end
 
       it 'does not create a favorite resource for the user' do
-        expect(Favorite.last).to be nil
+        expect(Favorite.last.id).to eq(@favorite.id)
       end
     end
   end
@@ -91,7 +92,9 @@ RSpec.describe 'Favorites Request API' do
         api_key: @user1.api_key
       }
 
-      get '/api/v1/favorites', params: JSON.generate(request_body)
+      headers = { 'CONTENT_TYPE' => 'application/json' }
+
+      get '/api/v1/favorites', headers: headers, params: { favorite: request_body }
     end
 
     it 'responds with the correct elements' do
@@ -133,7 +136,7 @@ RSpec.describe 'Favorites Request API' do
     end
   end
 
-  describe 'Sad Path - GET favorites' do
+  describe 'Sad Path - Get favorites' do
     describe 'Invalid API key' do
       it 'is a 400 response that sends an error message' do
         user1 = create(:user)
@@ -145,7 +148,9 @@ RSpec.describe 'Favorites Request API' do
           api_key: api_key_with_no_user
         }
 
-        get '/api/v1/favorites', params: JSON.generate(request_body)
+        headers = { 'CONTENT_TYPE' => 'application/json' }
+
+        get '/api/v1/favorites', headers: headers, params: { favorite: request_body }
 
         expect(response).to_not be_successful
         expect(response).to have_http_status(400)
@@ -168,7 +173,9 @@ RSpec.describe 'Favorites Request API' do
           api_key: user1.api_key
         }
 
-        get '/api/v1/favorites', params: JSON.generate(request_body)
+        headers = { 'CONTENT_TYPE' => 'application/json' }
+
+        get '/api/v1/favorites', headers: headers, params: { favorite: request_body }
 
         expect(response).to be_successful
         expect(response).to have_http_status(200)
