@@ -135,11 +135,47 @@ RSpec.describe 'Favorites Request API' do
 
   describe 'Sad Path - GET favorites' do
     describe 'Invalid API key' do
+      it 'is a 400 response that sends an error message' do
+        user1 = create(:user)
+        user1.generate_api_key
+        create(:favorite, user_id: user1.id)
+        api_key_with_no_user = SecureRandom.urlsafe_base64(27)
 
+        request_body = {
+          api_key: api_key_with_no_user
+        }
+
+        get '/api/v1/favorites', params: JSON.generate(request_body)
+
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(400)
+
+        favorites_response = JSON.parse(response.body, symbolize_names: true)
+        expected_error_response = {
+          "message": 'Favorites could not be found',
+          "error": 'API key is invalid'
+        }
+        expect(favorites_response).to eq(expected_error_response)
+      end
     end
 
     describe 'User has no favorited recipes' do
+      it 'returns an empty array' do
+        user1 = create(:user)
+        user1.generate_api_key
 
+        request_body = {
+          api_key: user1.api_key
+        }
+
+        get '/api/v1/favorites', params: JSON.generate(request_body)
+
+        expect(response).to be_successful
+        expect(response).to have_http_status(200)
+
+        favorites_response = JSON.parse(response.body, symbolize_names: true)
+        expect(favorites_response[:data]).to eq([])
+      end
     end
   end
 end
