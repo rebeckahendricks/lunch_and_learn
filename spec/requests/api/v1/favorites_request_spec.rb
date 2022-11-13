@@ -76,4 +76,70 @@ RSpec.describe 'Favorites Request API' do
       end
     end
   end
+
+  describe 'Happy Path - Get favorites' do
+    before :each do
+      @user1 = create(:user)
+      @user2 = create(:user)
+      @user1.generate_api_key
+
+      @favorite1 = create(:favorite, user_id: @user1.id)
+      @favorite2 = create(:favorite, user_id: @user1.id)
+      @favorite3 = create(:favorite, user_id: @user2.id)
+
+      request_body = {
+        api_key: @user1.api_key
+      }
+
+      get '/api/v1/favorites', params: JSON.generate(request_body)
+    end
+
+    it 'responds with the correct elements' do
+      expect(response).to be_successful
+      expect(response).to have_http_status(200)
+
+      favorites_response = JSON.parse(response.body, symbolize_names: true)
+
+      expect(favorites_response).to be_a Hash
+      expect(favorites_response).to have_key :data
+      expect(favorites_response[:data]).to be_an Array
+
+      favorites_response[:data].each do |favorite|
+        expect(favorite).to have_key :id
+        expect(favorite[:id]).to be_a String
+        expect(favorite).to have_key :type
+        expect(favorite[:type]).to eq('favorite')
+        expect(favorite).to have_key :attributes
+        expect(favorite[:attributes]).to be_a Hash
+        expect(favorite[:attributes]).to have_key :recipe_title
+        expect(favorite[:attributes][:recipe_title]).to be_a String
+        expect(favorite[:attributes]).to have_key :recipe_link
+        expect(favorite[:attributes][:recipe_link]).to be_a String
+        expect(favorite[:attributes]).to have_key :country
+        expect(favorite[:attributes][:country]).to be_a String
+        expect(favorite[:attributes]).to have_key :created_at
+        expect(favorite[:attributes][:created_at]).to be_a String
+      end
+    end
+
+    it 'returns only the requested users favorites' do
+      favorites_response = JSON.parse(response.body, symbolize_names: true)
+      user1_favorite1 = favorites_response[:data][0][:attributes]
+      user1_favorite2 = favorites_response[:data][1][:attributes]
+
+      expect(user1_favorite1[:recipe_title]).to eq(@favorite1.recipe_title)
+      expect(user1_favorite2[:recipe_title]).to eq(@favorite2.recipe_title)
+      expect(favorites_response[:data].count).to eq(2)
+    end
+  end
+
+  describe 'Sad Path - GET favorites' do
+    describe 'Invalid API key' do
+
+    end
+
+    describe 'User has no favorited recipes' do
+
+    end
+  end
 end
