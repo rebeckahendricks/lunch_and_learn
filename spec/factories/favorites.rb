@@ -3,6 +3,6 @@ FactoryBot.define do
     country { Faker::Address.country }
     recipe_link { Faker::Internet.url }
     recipe_title { Faker::Food.dish }
-    user { nil }
+    user_id { nil }
   end
 end
