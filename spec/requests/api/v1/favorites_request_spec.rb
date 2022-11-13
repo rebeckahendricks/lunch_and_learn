@@ -94,7 +94,7 @@ RSpec.describe 'Favorites Request API' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      get '/api/v1/favorites', headers: headers, params: { favorite: request_body }
+      get '/api/v1/favorites', headers: headers, params: request_body 
     end
 
     it 'responds with the correct elements' do
@@ -150,7 +150,7 @@ RSpec.describe 'Favorites Request API' do
 
         headers = { 'CONTENT_TYPE' => 'application/json' }
 
-        get '/api/v1/favorites', headers: headers, params: { favorite: request_body }
+        get '/api/v1/favorites', headers: headers, params: request_body 
 
         expect(response).to_not be_successful
         expect(response).to have_http_status(400)
@@ -175,7 +175,7 @@ RSpec.describe 'Favorites Request API' do
 
         headers = { 'CONTENT_TYPE' => 'application/json' }
 
-        get '/api/v1/favorites', headers: headers, params: { favorite: request_body }
+        get '/api/v1/favorites', headers: headers, params: request_body
 
         expect(response).to be_successful
         expect(response).to have_http_status(200)
