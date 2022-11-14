@@ -20,4 +20,11 @@ class ErrorSerializer
       "error": 'API key is invalid'
     }
   end
+
+  def self.invalid_country
+    {
+      "message": 'Could not find tourist sights',
+      "error": 'Country input is not a valid country'
+    }
+  end
 end

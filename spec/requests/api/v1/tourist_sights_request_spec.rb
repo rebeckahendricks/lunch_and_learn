@@ -65,7 +65,7 @@ RSpec.describe 'Tourist Sights API' do
     end
   end
 
-  describe 'Sad Path - GET Tourist Sights (country name has spaces)', :vcr do
+  describe 'Happy Path - GET Tourist Sights (country name has spaces)', :vcr do
     before :each do
       country = 'New%20Zealand'
       get "/api/v1/tourist_sights?country=#{country}"
@@ -93,6 +93,26 @@ RSpec.describe 'Tourist Sights API' do
         expect(sight[:attributes][:address]).to be_a String
         expect(sight[:attributes][:place_id]).to be_a String
       end
+    end
+  end
+
+  describe 'Sad Path - GET Tourist Sights (country is not a valid country)', :vcr do
+    before :each do
+      country = 'abcdefghij'
+      get "/api/v1/tourist_sights?country=#{country}"
+      @sights = JSON.parse(response.body, symbolize_names: true)
+    end
+
+    it 'is a 404 response that sends an error message' do
+      expect(response).to_not be_successful
+      expect(response).to have_http_status(404)
+
+      sights = JSON.parse(response.body, symbolize_names: true)
+      expected_error_response = {
+        "message": 'Could not find tourist sights',
+        "error": 'Country input is not a valid country'
+      }
+      expect(sights).to eq(expected_error_response)
     end
   end
 end
