@@ -14,7 +14,7 @@ RSpec.describe CountryService do
     end
   end
 
-  it 'returns information about a specific country' do
+  it 'returns information about a specific country', :vcr do
     country = 'France'
     search = CountryService.get_country_info(country)
 
