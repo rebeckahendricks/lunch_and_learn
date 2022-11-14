@@ -7,15 +7,20 @@ class LearningResourceFacade
 
   def self.video(country)
     video_data = YouTubeService.get_videos(country)
-    if video_data[:items].first.nil?
-      []
+    video = video_data[:items].first
+    if video_matches_country?(video, country)
+      Video.new(video)
     else
-      Video.new(video_data[:items].first)
+      []
     end
   end
 
   def self.images(country)
     images_data = UnsplashService.get_images(country)
     images_data[:results].first(10).map { |image_data| Image.new(image_data) }
+  end
+
+  def self.video_matches_country?(video, country)
+    video[:snippet][:title].include?(country.downcase.titleize)
   end
 end

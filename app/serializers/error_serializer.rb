@@ -20,4 +20,17 @@ class ErrorSerializer
       "error": 'API key is invalid'
     }
   end
+
+  def self.invalid_country
+    {
+      "message": 'Resource could not be found',
+      "error": 'Country is invalid'
+    }
+  end
+
+  def self.favorite_not_found
+    {
+      "error": 'Favorite not found'
+    }
+  end
 end

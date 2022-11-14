@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Recipes API' do
+RSpec.describe 'Recipes API' do
   describe 'Happy Path', :vcr do
     it 'sends a list of recipes from a country given by a user' do
       get '/api/v1/recipes?country=thailand'
@@ -66,9 +66,9 @@ describe 'Recipes API' do
   end
 
   describe 'Sad Path', :vcr do
-    describe 'If a country parameter is an empty string' do
+    describe 'if a valid country parameter does not return any recipes' do
       it 'sends an empty array' do
-        get '/api/v1/recipes?country='
+        get '/api/v1/recipes?country=vatican city'
         recipes = JSON.parse(response.body, symbolize_names: true)
 
         expect(response).to be_successful
@@ -77,14 +77,21 @@ describe 'Recipes API' do
       end
     end
 
-    describe 'If a value does not return any recipes' do
+    describe 'if a country parameter is an empty string' do
       it 'sends an empty array' do
-        get '/api/v1/recipes?country=abcdefghijklmnop'
-        recipes = JSON.parse(response.body, symbolize_names: true)
+        get '/api/v1/recipes?country='
 
-        expect(response).to be_successful
-        expect(recipes[:data]).to be_an Array
-        expect(recipes[:data]).to be_empty
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(404)
+      end
+    end
+
+    describe 'if a country parameter is not a valid country' do
+      it 'returns a 404 status' do
+        get '/api/v1/recipes?country=abcdefghij'
+
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(404)
       end
     end
   end

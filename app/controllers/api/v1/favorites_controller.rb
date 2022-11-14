@@ -19,6 +19,16 @@ class Api::V1::FavoritesController < ApplicationController
     end
   end
 
+  def destroy
+    favorite = Favorite.find_by(id: params[:id])
+    if favorite
+      Favorite.delete(favorite)
+      render json: FavoriteSerializer.successful_destroy
+    else
+      render json: ErrorSerializer.favorite_not_found, status: 404
+    end
+  end
+
   private
 
   def favorite_params

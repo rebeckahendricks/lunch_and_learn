@@ -1,9 +1,10 @@
 require 'rails_helper'
 
-describe 'Learning Resources API' do
+RSpec.describe 'Learning Resources API' do
   describe 'Happy Path', :vcr do
     it 'sends a list of learning resources from a country given by a user' do
-      get '/api/v1/learning_resources?country=italy'
+      country = 'italy'
+      get "/api/v1/learning_resources?country=#{country}"
       resources = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to be_successful
@@ -19,7 +20,7 @@ describe 'Learning Resources API' do
       expect(resource[:attributes]).to be_a Hash
 
       expect(resource[:attributes]).to have_key :country
-      expect(resource[:attributes][:country]).to eq('italy')
+      expect(resource[:attributes][:country]).to eq(country)
       expect(resource[:attributes]).to have_key :video
       expect(resource[:attributes][:video]).to be_a Hash
       expect(resource[:attributes][:video]).to have_key :title
@@ -41,8 +42,9 @@ describe 'Learning Resources API' do
   end
 
   describe 'Sad Path', :vcr do
-    it 'returns empty objects if no videos or images are found' do
-      get '/api/v1/learning_resources?country=abcdefghijk'
+    it 'returns empty objects if no videos are found' do
+      country = 'vatican city'
+      get "/api/v1/learning_resources?country=#{country}"
       resources = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to be_successful
@@ -58,11 +60,19 @@ describe 'Learning Resources API' do
       expect(resource[:attributes]).to be_a Hash
 
       expect(resource[:attributes]).to have_key :country
-      expect(resource[:attributes][:country]).to eq('abcdefghijk')
+      expect(resource[:attributes][:country]).to eq(country)
       expect(resource[:attributes]).to have_key :video
       expect(resource[:attributes][:video]).to eq([])
-      expect(resource[:attributes]).to have_key :images
-      expect(resource[:attributes][:images]).to eq([])
+    end
+
+    describe 'if a country parameter is not a valid country' do
+      it 'returns a 404 status' do
+        country = 'abcdefghi'
+        get "/api/v1/learning_resources?country=#{country}"
+
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(404)
+      end
     end
   end
 end

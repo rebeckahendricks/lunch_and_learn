@@ -5,6 +5,12 @@ class FavoriteSerializer
     }
   end
 
+  def self.successful_destroy
+    {
+      "success": 'Favorite deleted successfully'
+    }
+  end
+
   def self.get_favorites(favorites)
     {
       "data": favorites.map do |favorite|
