@@ -7,7 +7,8 @@ class CountryFacade
     country_names.sample
   end
 
-  def self.capital_lat_long(country)
+  def self.capital_lat_long(country = nil)
+    country ||= random_country
     data = CountryService.get_country_info(country)
     data[0][:latlng]
   end

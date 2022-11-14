@@ -1,0 +1,193 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://restcountries.com/v3.1/name/Ecuador
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:43:43 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1289'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6eyJjb21tb24iOiJFY3VhZG9yIiwib2ZmaWNpYWwiOiJSZXB1YmxpYyBvZiBFY3VhZG9yIiwibmF0aXZlTmFtZSI6eyJzcGEiOnsib2ZmaWNpYWwiOiJSZXDDumJsaWNhIGRlbCBFY3VhZG9yIiwiY29tbW9uIjoiRWN1YWRvciJ9fX0sInRsZCI6WyIuZWMiXSwiY2NhMiI6IkVDIiwiY2NuMyI6IjIxOCIsImNjYTMiOiJFQ1UiLCJjaW9jIjoiRUNVIiwiaW5kZXBlbmRlbnQiOnRydWUsInN0YXR1cyI6Im9mZmljaWFsbHktYXNzaWduZWQiLCJ1bk1lbWJlciI6dHJ1ZSwiY3VycmVuY2llcyI6eyJVU0QiOnsibmFtZSI6IlVuaXRlZCBTdGF0ZXMgZG9sbGFyIiwic3ltYm9sIjoiJCJ9fSwiaWRkIjp7InJvb3QiOiIrNSIsInN1ZmZpeGVzIjpbIjkzIl19LCJjYXBpdGFsIjpbIlF1aXRvIl0sImFsdFNwZWxsaW5ncyI6WyJFQyIsIlJlcHVibGljIG9mIEVjdWFkb3IiLCJSZXDDumJsaWNhIGRlbCBFY3VhZG9yIl0sInJlZ2lvbiI6IkFtZXJpY2FzIiwic3VicmVnaW9uIjoiU291dGggQW1lcmljYSIsImxhbmd1YWdlcyI6eyJzcGEiOiJTcGFuaXNoIn0sInRyYW5zbGF0aW9ucyI6eyJhcmEiOnsib2ZmaWNpYWwiOiLYrNmF2YfZiNix2YrYqSDYp9mE2KXZg9mI2KfYr9mI2LEiLCJjb21tb24iOiLYp9mE2KXZg9mI2KfYr9mI2LEifSwiYnJlIjp7Im9mZmljaWFsIjoiUmVwdWJsaWsgRWN1YWRvciIsImNvbW1vbiI6IkVjdWFkb3IifSwiY2VzIjp7Im9mZmljaWFsIjoiRWt2w6Fkb3Jza8OhIHJlcHVibGlrYSIsImNvbW1vbiI6IkVrdsOhZG9yIn0sImN5bSI6eyJvZmZpY2lhbCI6Ikd3ZXJpbmlhZXRoIEVjd2Fkb3IiLCJjb21tb24iOiJFY3dhZG9yIn0sImRldSI6eyJvZmZpY2lhbCI6IlJlcHVibGlrIEVjdWFkb3IiLCJjb21tb24iOiJFY3VhZG9yIn0sImVzdCI6eyJvZmZpY2lhbCI6IkVjdWFkb3JpIFZhYmFyaWlrIiwiY29tbW9uIjoiRWN1YWRvciJ9LCJmaW4iOnsib2ZmaWNpYWwiOiJFY3VhZG9yaW4gdGFzYXZhbHRhIiwiY29tbW9uIjoiRWN1YWRvciJ9LCJmcmEiOnsib2ZmaWNpYWwiOiJSw6lwdWJsaXF1ZSBkZSBsJ8OJcXVhdGV1ciIsImNvbW1vbiI6IsOJcXVhdGV1ciJ9LCJocnYiOnsib2ZmaWNpYWwiOiJSZXB1Ymxpa2EgRWt2YWRvciIsImNvbW1vbiI6IkVrdmFkb3IifSwiaHVuIjp7Im9mZmljaWFsIjoiRWN1YWRvcmkgS8O2enTDoXJzYXPDoWciLCJjb21tb24iOiJFY3VhZG9yIn0sIml0YSI6eyJvZmZpY2lhbCI6IlJlcHViYmxpY2EgZGVsbCdFY3VhZG9yIiwiY29tbW9uIjoiRWN1YWRvciJ9LCJqcG4iOnsib2ZmaWNpYWwiOiLjgqjjgq/jgqLjg4njg6vlhbHlkozlm70iLCJjb21tb24iOiLjgqjjgq/jgqLjg4njg6sifSwia29yIjp7Im9mZmljaWFsIjoi7JeQ7L2w64+E66W0IOqzte2ZlOq1rSIsImNvbW1vbiI6IuyXkOy9sOuPhOultCJ9LCJubGQiOnsib2ZmaWNpYWwiOiJSZXB1YmxpZWsgRWN1YWRvciIsImNvbW1vbiI6IkVjdWFkb3IifSwicGVyIjp7Im9mZmljaWFsIjoi2KzZhdmH2YjYsduMINin2qnZiNin2K/ZiNixIiwiY29tbW9uIjoi2KfaqdmI2KfYr9mI2LEifSwicG9sIjp7Im9mZmljaWFsIjoiRWt3YWRvciIsImNvbW1vbiI6IkVrd2Fkb3IifSwicG9yIjp7Im9mZmljaWFsIjoiUmVww7pibGljYSBkbyBFcXVhZG9yIiwiY29tbW9uIjoiRXF1YWRvciJ9LCJydXMiOnsib2ZmaWNpYWwiOiLQoNC10YHQv9GD0LHQu9C40LrQsCDQrdC60LLQsNC00L7RgCIsImNvbW1vbiI6ItCt0LrQstCw0LTQvtGAIn0sInNsayI6eyJvZmZpY2lhbCI6IkVrdsOhZG9yc2vDoSByZXB1Ymxpa2EiLCJjb21tb24iOiJFa3bDoWRvciJ9LCJzcGEiOnsib2ZmaWNpYWwiOiJSZXDDumJsaWNhIGRlbCBFY3VhZG9yIiwiY29tbW9uIjoiRWN1YWRvciJ9LCJzd2UiOnsib2ZmaWNpYWwiOiJSZXB1Ymxpa2VuIEVjdWFkb3IiLCJjb21tb24iOiJFY3VhZG9yIn0sInR1ciI6eyJvZmZpY2lhbCI6IkVrdmFkb3IgQ3VtaHVyaXlldGkiLCJjb21tb24iOiJFa3ZhZG9yIn0sInVyZCI6eyJvZmZpY2lhbCI6Itis2YXbgdmI2LHbjNuBINin24zaqdmI2ojZiNixIiwiY29tbW9uIjoi2KfbjNqp2YjYp9qI2YjYsSJ9LCJ6aG8iOnsib2ZmaWNpYWwiOiLljoTnk5zlpJrlsJTlhbHlkozlm70iLCJjb21tb24iOiLljoTnk5zlpJrlsJQifX0sImxhdGxuZyI6Wy0yLjAsLTc3LjVdLCJsYW5kbG9ja2VkIjpmYWxzZSwiYm9yZGVycyI6WyJDT0wiLCJQRVIiXSwiYXJlYSI6Mjc2ODQxLjAsImRlbW9ueW1zIjp7ImVuZyI6eyJmIjoiRWN1YWRvcmVhbiIsIm0iOiJFY3VhZG9yZWFuIn0sImZyYSI6eyJmIjoiw4lxdWF0b3JpZW5uZSIsIm0iOiLDiXF1YXRvcmllbiJ9fSwiZmxhZyI6Ilx1RDgzQ1x1RERFQVx1RDgzQ1x1RERFOCIsIm1hcHMiOnsiZ29vZ2xlTWFwcyI6Imh0dHBzOi8vZ29vLmdsL21hcHMvVGJYOGhVVzRnY2JSUFppSzciLCJvcGVuU3RyZWV0TWFwcyI6Imh0dHBzOi8vd3d3Lm9wZW5zdHJlZXRtYXAub3JnL3JlbGF0aW9uLzEwODA4OSJ9LCJwb3B1bGF0aW9uIjoxNzY0MzA2MCwiZ2luaSI6eyIyMDE5Ijo0NS43fSwiZmlmYSI6IkVDVSIsImNhciI6eyJzaWducyI6WyJFQyJdLCJzaWRlIjoicmlnaHQifSwidGltZXpvbmVzIjpbIlVUQy0wNjowMCIsIlVUQy0wNTowMCJdLCJjb250aW5lbnRzIjpbIlNvdXRoIEFtZXJpY2EiXSwiZmxhZ3MiOnsicG5nIjoiaHR0cHM6Ly9mbGFnY2RuLmNvbS93MzIwL2VjLnBuZyIsInN2ZyI6Imh0dHBzOi8vZmxhZ2Nkbi5jb20vZWMuc3ZnIn0sImNvYXRPZkFybXMiOnsicG5nIjoiaHR0cHM6Ly9tYWluZmFjdHMuY29tL21lZGlhL2ltYWdlcy9jb2F0c19vZl9hcm1zL2VjLnBuZyIsInN2ZyI6Imh0dHBzOi8vbWFpbmZhY3RzLmNvbS9tZWRpYS9pbWFnZXMvY29hdHNfb2ZfYXJtcy9lYy5zdmcifSwic3RhcnRPZldlZWsiOiJtb25kYXkiLCJjYXBpdGFsSW5mbyI6eyJsYXRsbmciOlstMC4yMiwtNzguNV19LCJwb3N0YWxDb2RlIjp7ImZvcm1hdCI6IkAjIyMjQCIsInJlZ2V4IjoiXihbYS16QS1aXVxcZHs0fVthLXpBLVpdKSQifX1d
+  recorded_at: Mon, 14 Nov 2022 17:43:43 GMT
+- request:
+    method: get
+    uri: https://api.geoapify.com/v2/places?apiKey=02cee7aca693487fb24a852db5d45f9b&categories=tourism.sights&filter=circle:-77.5,-2.0,20000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:43:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '1.0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - accept, accept-language, content-language, access-control-max-age, access-control-allow-headers,
+        access-control-allow-methods, access-control-allow-origin, allow, api-version,
+        cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary,
+        cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop,
+        accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent,
+        cf-connecting-ip, cf-pseudo-ipv4, x-forwarded-port
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS, PUT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Cache-Control:
+      - private, max-age=0, no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DS0hdKEGcpViVIcgm2cqe%2BVl5J9Lv7s1LCyeW%2BFJZpWHisvmDdeI0GmfyjwBaSXLhmvFHz24NO4%2BhFg8Qc15e4wdjZ9cYXS13UE7L00qvmt8tkj8acc6Sb2EtnjNu%2F3oMaIrfnquicBrCUQbZII%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 76a18d119b90637e-ORD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"type":"FeatureCollection","features":[]}'
+  recorded_at: Mon, 14 Nov 2022 17:43:44 GMT
+- request:
+    method: get
+    uri: https://restcountries.com/v3.1/name/Uruguay
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:44:51 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1379'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6eyJjb21tb24iOiJVcnVndWF5Iiwib2ZmaWNpYWwiOiJPcmllbnRhbCBSZXB1YmxpYyBvZiBVcnVndWF5IiwibmF0aXZlTmFtZSI6eyJzcGEiOnsib2ZmaWNpYWwiOiJSZXDDumJsaWNhIE9yaWVudGFsIGRlbCBVcnVndWF5IiwiY29tbW9uIjoiVXJ1Z3VheSJ9fX0sInRsZCI6WyIudXkiXSwiY2NhMiI6IlVZIiwiY2NuMyI6Ijg1OCIsImNjYTMiOiJVUlkiLCJjaW9jIjoiVVJVIiwiaW5kZXBlbmRlbnQiOnRydWUsInN0YXR1cyI6Im9mZmljaWFsbHktYXNzaWduZWQiLCJ1bk1lbWJlciI6dHJ1ZSwiY3VycmVuY2llcyI6eyJVWVUiOnsibmFtZSI6IlVydWd1YXlhbiBwZXNvIiwic3ltYm9sIjoiJCJ9fSwiaWRkIjp7InJvb3QiOiIrNSIsInN1ZmZpeGVzIjpbIjk4Il19LCJjYXBpdGFsIjpbIk1vbnRldmlkZW8iXSwiYWx0U3BlbGxpbmdzIjpbIlVZIiwiT3JpZW50YWwgUmVwdWJsaWMgb2YgVXJ1Z3VheSIsIlJlcMO6YmxpY2EgT3JpZW50YWwgZGVsIFVydWd1YXkiXSwicmVnaW9uIjoiQW1lcmljYXMiLCJzdWJyZWdpb24iOiJTb3V0aCBBbWVyaWNhIiwibGFuZ3VhZ2VzIjp7InNwYSI6IlNwYW5pc2gifSwidHJhbnNsYXRpb25zIjp7ImFyYSI6eyJvZmZpY2lhbCI6Itis2YXZh9mI2LHZitipINin2YTYo9mI2LHZiNi62YjYp9mKINin2YTYtNix2YLZitipIiwiY29tbW9uIjoi2KfZhNij2YjYsdmI2LrZiNin2YoifSwiYnJlIjp7Im9mZmljaWFsIjoiUmVwdWJsaWsgUmV0ZXIgVXJ1Z3VheSIsImNvbW1vbiI6IlVydWd1YXkifSwiY2VzIjp7Im9mZmljaWFsIjoiVXJ1Z3VheXNrw6EgdsO9Y2hvZG7DrSByZXB1Ymxpa2EiLCJjb21tb24iOiJVcnVndWF5In0sImN5bSI6eyJvZmZpY2lhbCI6Ik9yaWVudGFsIFJlcHVibGljIG9mIFVydWd1YXkiLCJjb21tb24iOiJVcnVndWF5In0sImRldSI6eyJvZmZpY2lhbCI6IlJlcHVibGlrIMOWc3RsaWNoIGRlcyBVcnVndWF5IiwiY29tbW9uIjoiVXJ1Z3VheSJ9LCJlc3QiOnsib2ZmaWNpYWwiOiJVcnVndWF5IElkYXZhYmFyaWlrIiwiY29tbW9uIjoiVXJ1Z3VheSJ9LCJmaW4iOnsib2ZmaWNpYWwiOiJVcnVndWF5biBpdMOkaW5lbiB0YXNhdmFsdGEiLCJjb21tb24iOiJVcnVndWF5In0sImZyYSI6eyJvZmZpY2lhbCI6IlLDqXB1YmxpcXVlIG9yaWVudGFsZSBkZSBsJ1VydWd1YXkiLCJjb21tb24iOiJVcnVndWF5In0sImhydiI6eyJvZmZpY2lhbCI6Ik9yaWplbnRhbG5hIFJlcHVibGlrYSBVcnVndmFqIiwiY29tbW9uIjoiVXJ1Z3ZhaiJ9LCJodW4iOnsib2ZmaWNpYWwiOiJVcnVndWF5aSBLZWxldGkgS8O2enTDoXJzYXPDoWciLCJjb21tb24iOiJVcnVndWF5In0sIml0YSI6eyJvZmZpY2lhbCI6IlJlcHViYmxpY2EgT3JpZW50YWxlIGRlbGwnVXJ1Z3VheSIsImNvbW1vbiI6IlVydWd1YXkifSwianBuIjp7Im9mZmljaWFsIjoi44Km44Or44Kw44Ki44Kk5p2x5pa55YWx5ZKM5Zu9IiwiY29tbW9uIjoi44Km44Or44Kw44Ki44KkIn0sImtvciI6eyJvZmZpY2lhbCI6IuyasOujqOqzvOydtCDrj5nrsKkg6rO17ZmU6rWtIiwiY29tbW9uIjoi7Jqw66Oo6rO87J20In0sIm5sZCI6eyJvZmZpY2lhbCI6Ik9vc3RlcnNlIFJlcHVibGllayBVcnVndWF5IiwiY29tbW9uIjoiVXJ1Z3VheSJ9LCJwZXIiOnsib2ZmaWNpYWwiOiLYrNmF2YfZiNix24wg2KfYsdmI2q/ZiNim2YciLCJjb21tb24iOiLYp9ix2Yjar9mI2KbZhyJ9LCJwb2wiOnsib2ZmaWNpYWwiOiJXc2Nob2RuaWEgUmVwdWJsaWthIFVydWd3YWp1IiwiY29tbW9uIjoiVXJ1Z3dhaiJ9LCJwb3IiOnsib2ZmaWNpYWwiOiJSZXDDumJsaWNhIE9yaWVudGFsIGRvIFVydWd1YWkiLCJjb21tb24iOiJVcnVndWFpIn0sInJ1cyI6eyJvZmZpY2lhbCI6ItCS0L7RgdGC0L7Rh9C90L7QuSDQoNC10YHQv9GD0LHQu9C40LrQuCDQo9GA0YPQs9Cy0LDQuSIsImNvbW1vbiI6ItCj0YDRg9Cz0LLQsNC5In0sInNsayI6eyJvZmZpY2lhbCI6IlVydWd1YWpza8OhIHbDvWNob2Ruw6EgcmVwdWJsaWthIiwiY29tbW9uIjoiVXJ1Z3VhaiJ9LCJzcGEiOnsib2ZmaWNpYWwiOiJSZXDDumJsaWNhIE9yaWVudGFsIGRlbCBVcnVndWF5IiwiY29tbW9uIjoiVXJ1Z3VheSJ9LCJzd2UiOnsib2ZmaWNpYWwiOiJSZXB1Ymxpa2VuIFVydWd1YXkiLCJjb21tb24iOiJVcnVndWF5In0sInR1ciI6eyJvZmZpY2lhbCI6IlVydWd1YXkgRG/En3UgQ3VtaHVyaXlldGkiLCJjb21tb24iOiJVcnVndWF5In0sInVyZCI6eyJvZmZpY2lhbCI6Itis2YXbgdmI2LHbjNuBINi02LHZgtuM24Eg24zZiNix2Kfar9mI2KbbkiIsImNvbW1vbiI6ItuM2YjYsdin2q/ZiNim25IifSwiemhvIjp7Im9mZmljaWFsIjoi5LmM5ouJ5Zyt5Lic5bK45YWx5ZKM5Zu9IiwiY29tbW9uIjoi5LmM5ouJ5ZytIn19LCJsYXRsbmciOlstMzMuMCwtNTYuMF0sImxhbmRsb2NrZWQiOmZhbHNlLCJib3JkZXJzIjpbIkFSRyIsIkJSQSJdLCJhcmVhIjoxODEwMzQuMCwiZGVtb255bXMiOnsiZW5nIjp7ImYiOiJVcnVndWF5YW4iLCJtIjoiVXJ1Z3VheWFuIn0sImZyYSI6eyJmIjoiVXJ1Z3VheWVubmUiLCJtIjoiVXJ1Z3VheWVuIn19LCJmbGFnIjoiXHVEODNDXHVEREZBXHVEODNDXHVEREZFIiwibWFwcyI6eyJnb29nbGVNYXBzIjoiaHR0cHM6Ly9nb28uZ2wvbWFwcy90aVE5QmFla2IxalF0RFNEOSIsIm9wZW5TdHJlZXRNYXBzIjoiaHR0cHM6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvcmVsYXRpb24vMjg3MDcyIn0sInBvcHVsYXRpb24iOjM0NzM3MjcsImdpbmkiOnsiMjAxOSI6MzkuN30sImZpZmEiOiJVUlUiLCJjYXIiOnsic2lnbnMiOlsiUk9VIl0sInNpZGUiOiJyaWdodCJ9LCJ0aW1lem9uZXMiOlsiVVRDLTAzOjAwIl0sImNvbnRpbmVudHMiOlsiU291dGggQW1lcmljYSJdLCJmbGFncyI6eyJwbmciOiJodHRwczovL2ZsYWdjZG4uY29tL3czMjAvdXkucG5nIiwic3ZnIjoiaHR0cHM6Ly9mbGFnY2RuLmNvbS91eS5zdmcifSwiY29hdE9mQXJtcyI6eyJwbmciOiJodHRwczovL21haW5mYWN0cy5jb20vbWVkaWEvaW1hZ2VzL2NvYXRzX29mX2FybXMvdXkucG5nIiwic3ZnIjoiaHR0cHM6Ly9tYWluZmFjdHMuY29tL21lZGlhL2ltYWdlcy9jb2F0c19vZl9hcm1zL3V5LnN2ZyJ9LCJzdGFydE9mV2VlayI6Im1vbmRheSIsImNhcGl0YWxJbmZvIjp7ImxhdGxuZyI6Wy0zNC44NSwtNTYuMTddfSwicG9zdGFsQ29kZSI6eyJmb3JtYXQiOiIjIyMjIyIsInJlZ2V4IjoiXihcXGR7NX0pJCJ9fV0=
+  recorded_at: Mon, 14 Nov 2022 17:44:51 GMT
+- request:
+    method: get
+    uri: https://api.geoapify.com/v2/places?apiKey=02cee7aca693487fb24a852db5d45f9b&categories=tourism.sights&filter=circle:-56.0,-33.0,20000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:44:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '1.0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - accept, accept-language, content-language, access-control-max-age, access-control-allow-headers,
+        access-control-allow-methods, access-control-allow-origin, allow, api-version,
+        cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary,
+        cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop,
+        accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent,
+        cf-connecting-ip, cf-pseudo-ipv4, x-forwarded-port
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS, PUT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Cache-Control:
+      - private, max-age=0, no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NtnIhr%2BAk2T92AgtGa0qKCMh%2FlGFinKGLhXvkxkK8Knprqz4kcfL84jmO9qtiZWUdThVh4zIHvXGOC5llfaIJ1C%2FJJUQsE7h6Qj9q9iaAvyMNcbQLK9%2B7dPepUGZbv%2FmHtncsww17szJcToGJqs%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 76a18ebc595186e4-ORD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"type":"FeatureCollection","features":[]}'
+  recorded_at: Mon, 14 Nov 2022 17:44:52 GMT
+recorded_with: VCR 6.1.0
