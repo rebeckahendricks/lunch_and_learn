@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Recipes API' do
+RSpec.describe 'Recipes API' do
   describe 'Happy Path', :vcr do
     it 'sends a list of recipes from a country given by a user' do
       get '/api/v1/recipes?country=thailand'

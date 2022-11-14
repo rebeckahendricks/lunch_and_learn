@@ -6,4 +6,9 @@ class CountryFacade
     end
     country_names.sample
   end
+
+  def self.capital_lat_long(country)
+    data = self.random_country
+    binding.pry
+  end
 end

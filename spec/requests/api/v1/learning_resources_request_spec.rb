@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Learning Resources API' do
+RSpec.describe 'Learning Resources API' do
   describe 'Happy Path', :vcr do
     it 'sends a list of learning resources from a country given by a user' do
       get '/api/v1/learning_resources?country=italy'
