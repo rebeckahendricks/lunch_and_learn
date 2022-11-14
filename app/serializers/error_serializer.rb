@@ -27,4 +27,10 @@ class ErrorSerializer
       "error": 'Country is invalid'
     }
   end
+
+  def self.favorite_not_found
+    {
+      "error": 'Favorite not found'
+    }
+  end
 end

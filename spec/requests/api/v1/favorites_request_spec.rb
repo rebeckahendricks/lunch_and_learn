@@ -186,7 +186,7 @@ RSpec.describe 'Favorites Request API' do
     end
   end
 
-  describe 'Delete Favorites' do
+  describe 'Happy Path - Delete Favorites' do
     it 'can destroy a users favorite' do
       user = create(:user)
       user.generate_api_key
@@ -195,11 +195,50 @@ RSpec.describe 'Favorites Request API' do
       expect(User.last).to eq(user)
       expect(user.favorites.last).to eq(favorite)
 
-      delete "/api/v1/favorite/#{favorite.id}"
+      delete "/api/v1/favorites/#{favorite.id}"
 
       expect(response).to be_successful
       expect(user.favorites.last).to_not eq(favorite)
       expect { Favorite.find(favorite.id) }.to raise_error(ActiveRecord::RecordNotFound)
+
+      delete_response = JSON.parse(response.body, symbolize_names: true)
+      successful_response = {
+        "success": 'Favorite deleted successfully'
+      }
+
+      expect(delete_response).to eq(successful_response)
+    end
+  end
+
+  describe 'Sad Path - Delete Favorites' do
+    describe 'if a favorite id does not exist' do
+      before :each do
+        @user = create(:user)
+        @user.generate_api_key
+        @favorite = create(:favorite, user_id: @user.id)
+      end
+
+      it 'does not delete a favorite' do
+        expect(@user.favorites.count).to eq(1)
+  
+        delete '/api/v1/favorites/abcd'
+
+        expect(@user.favorites.count).to eq(1)
+        expect(Favorite.last).to eq(@favorite)
+      end
+
+      it 'has a 404 response and an error message' do
+        delete '/api/v1/favorites/abcd'
+
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(404)
+
+        delete_response = JSON.parse(response.body, symbolize_names: true)
+        unsuccessful_response = {
+          "error": 'Favorite not found'
+        }
+        expect(delete_response).to eq(unsuccessful_response)
+      end
     end
   end
 end
