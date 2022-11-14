@@ -8,6 +8,7 @@ class CountryService
   end
 
   def self.get_country_info(country)
+    country.gsub!(/ /, '%20')
     response = conn.get("/v3.1/name/#{country}")
     parse(response)
   end
