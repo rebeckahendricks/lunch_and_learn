@@ -77,14 +77,23 @@ describe 'Recipes API' do
       end
     end
 
-    describe 'If a value does not return any recipes' do
+    describe 'If a country parameter does not return any recipes' do
       it 'sends an empty array' do
-        get '/api/v1/recipes?country=abcdefghijklmnop'
+        get '/api/v1/recipes?country=vatican city'
         recipes = JSON.parse(response.body, symbolize_names: true)
 
         expect(response).to be_successful
         expect(recipes[:data]).to be_an Array
         expect(recipes[:data]).to be_empty
+      end
+    end
+
+    describe 'If a country parameter is not a valid country' do
+      it 'returns a 404 status' do
+        get '/api/v1/recipes?country=abcdefghij'
+
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(404)
       end
     end
   end

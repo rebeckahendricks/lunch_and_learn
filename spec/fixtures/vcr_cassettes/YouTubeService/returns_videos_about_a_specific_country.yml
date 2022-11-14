@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 12 Nov 2022 04:43:40 GMT
+      - Mon, 14 Nov 2022 20:33:49 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -43,7 +43,188 @@ http_interactions:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        ewogICJraW5kIjogInlvdXR1YmUjc2VhcmNoTGlzdFJlc3BvbnNlIiwKICAiZXRhZyI6ICJlWjlTS1FqQkFSWlhTV2hiSDNCLU5iaFAtUGMiLAogICJuZXh0UGFnZVRva2VuIjogIkNBVVFBQSIsCiAgInJlZ2lvbkNvZGUiOiAiVVMiLAogICJwYWdlSW5mbyI6IHsKICAgICJ0b3RhbFJlc3VsdHMiOiA1NywKICAgICJyZXN1bHRzUGVyUGFnZSI6IDUKICB9LAogICJpdGVtcyI6IFsKICAgIHsKICAgICAgImtpbmQiOiAieW91dHViZSNzZWFyY2hSZXN1bHQiLAogICAgICAiZXRhZyI6ICJmWnJ4WWVwM1NwT0wyU1JaUmFyaWRNTEpoWjgiLAogICAgICAiaWQiOiB7CiAgICAgICAgImtpbmQiOiAieW91dHViZSN2aWRlbyIsCiAgICAgICAgInZpZGVvSWQiOiAiREQ0d2p3YUZVLVUiCiAgICAgIH0sCiAgICAgICJzbmlwcGV0IjogewogICAgICAgICJwdWJsaXNoZWRBdCI6ICIyMDIxLTA1LTA3VDAzOjIwOjUzWiIsCiAgICAgICAgImNoYW5uZWxJZCI6ICJVQ2x1UTV5SW5iZUFra2VDbmROblVocHciLAogICAgICAgICJ0aXRsZSI6ICJBIFN1cGVyIFF1aWNrIEhpc3Rvcnkgb2YgSXRhbHkiLAogICAgICAgICJkZXNjcmlwdGlvbiI6ICJTb3VyY2VzOiBcIkEgQnJpZWYgSGlzdG9yeSBvZiBJdGFseVwiICgyMDE4KSBieSBKZXJlbXkgQmxhY2suIFJvYmluc29uIFB1Ymxpc2hpbmcsIExvbmRvbi4gXCJUaGUgUHVyc3VpdCBvZiBJdGFseTogQSBIaXN0b3J5IG9mIGl0cyAuLi4iLAogICAgICAgICJ0aHVtYm5haWxzIjogewogICAgICAgICAgImRlZmF1bHQiOiB7CiAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9ERDR3andhRlUtVS9kZWZhdWx0LmpwZyIsCiAgICAgICAgICAgICJ3aWR0aCI6IDEyMCwKICAgICAgICAgICAgImhlaWdodCI6IDkwCiAgICAgICAgICB9LAogICAgICAgICAgIm1lZGl1bSI6IHsKICAgICAgICAgICAgInVybCI6ICJodHRwczovL2kueXRpbWcuY29tL3ZpL0RENHdqd2FGVS1VL21xZGVmYXVsdC5qcGciLAogICAgICAgICAgICAid2lkdGgiOiAzMjAsCiAgICAgICAgICAgICJoZWlnaHQiOiAxODAKICAgICAgICAgIH0sCiAgICAgICAgICAiaGlnaCI6IHsKICAgICAgICAgICAgInVybCI6ICJodHRwczovL2kueXRpbWcuY29tL3ZpL0RENHdqd2FGVS1VL2hxZGVmYXVsdC5qcGciLAogICAgICAgICAgICAid2lkdGgiOiA0ODAsCiAgICAgICAgICAgICJoZWlnaHQiOiAzNjAKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJjaGFubmVsVGl0bGUiOiAiTXIgSGlzdG9yeSIsCiAgICAgICAgImxpdmVCcm9hZGNhc3RDb250ZW50IjogIm5vbmUiLAogICAgICAgICJwdWJsaXNoVGltZSI6ICIyMDIxLTA1LTA3VDAzOjIwOjUzWiIKICAgICAgfQogICAgfSwKICAgIHsKICAgICAgImtpbmQiOiAieW91dHViZSNzZWFyY2hSZXN1bHQiLAogICAgICAiZXRhZyI6ICJIU0t1d3UwSXg4bFZDSWxRWkF4MWZzcUN0NEUiLAogICAgICAiaWQiOiB7CiAgICAgICAgImtpbmQiOiAieW91dHViZSN2aWRlbyIsCiAgICAgICAgInZpZGVvSWQiOiAiR1h3dzY1U0NaMXMiCiAgICAgIH0sCiAgICAgICJzbmlwcGV0IjogewogICAgICAgICJwdWJsaXNoZWRBdCI6ICIyMDIwLTAxLTA1VDIxOjEwOjE1WiIsCiAgICAgICAgImNoYW5uZWxJZCI6ICJVQ2x1UTV5SW5iZUFra2VDbmROblVocHciLAogICAgICAgICJ0aXRsZSI6ICJBIFN1cGVyIFF1aWNrIEhpc3Rvcnkgb2YgQ3JvYXRpYSIsCiAgICAgICAgImRlc2NyaXB0aW9uIjogIlBpY3R1cmVzIFJlcXVpcmluZyBBdHRyaWJ1dGlvbjogRWxlY3RyaWRlb2RlczogaHR0cHM6Ly9jb21tb25zLndpa2ltZWRpYS5vcmcvd2lraS9GaWxlOk1vbmtvZG9uamE0LkpQRyBNYXJ5cm9zZUI1NDogLi4uIiwKICAgICAgICAidGh1bWJuYWlscyI6IHsKICAgICAgICAgICJkZWZhdWx0IjogewogICAgICAgICAgICAidXJsIjogImh0dHBzOi8vaS55dGltZy5jb20vdmkvR1h3dzY1U0NaMXMvZGVmYXVsdC5qcGciLAogICAgICAgICAgICAid2lkdGgiOiAxMjAsCiAgICAgICAgICAgICJoZWlnaHQiOiA5MAogICAgICAgICAgfSwKICAgICAgICAgICJtZWRpdW0iOiB7CiAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9HWHd3NjVTQ1oxcy9tcWRlZmF1bHQuanBnIiwKICAgICAgICAgICAgIndpZHRoIjogMzIwLAogICAgICAgICAgICAiaGVpZ2h0IjogMTgwCiAgICAgICAgICB9LAogICAgICAgICAgImhpZ2giOiB7CiAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9HWHd3NjVTQ1oxcy9ocWRlZmF1bHQuanBnIiwKICAgICAgICAgICAgIndpZHRoIjogNDgwLAogICAgICAgICAgICAiaGVpZ2h0IjogMzYwCiAgICAgICAgICB9CiAgICAgICAgfSwKICAgICAgICAiY2hhbm5lbFRpdGxlIjogIk1yIEhpc3RvcnkiLAogICAgICAgICJsaXZlQnJvYWRjYXN0Q29udGVudCI6ICJub25lIiwKICAgICAgICAicHVibGlzaFRpbWUiOiAiMjAyMC0wMS0wNVQyMToxMDoxNVoiCiAgICAgIH0KICAgIH0sCiAgICB7CiAgICAgICJraW5kIjogInlvdXR1YmUjc2VhcmNoUmVzdWx0IiwKICAgICAgImV0YWciOiAiUWIweWF5RkNnMTBtdFg0bmpWV3RnNHVwTjNjIiwKICAgICAgImlkIjogewogICAgICAgICJraW5kIjogInlvdXR1YmUjdmlkZW8iLAogICAgICAgICJ2aWRlb0lkIjogIjQwNExXcW5RaEtvIgogICAgICB9LAogICAgICAic25pcHBldCI6IHsKICAgICAgICAicHVibGlzaGVkQXQiOiAiMjAyMS0wNy0zMVQyMToyNjoxOFoiLAogICAgICAgICJjaGFubmVsSWQiOiAiVUNsdVE1eUluYmVBa2tlQ25kTm5VaHB3IiwKICAgICAgICAidGl0bGUiOiAiQSBTdXBlciBRdWljayBIaXN0b3J5IG9mIEtpcmliYXRpIiwKICAgICAgICAiZGVzY3JpcHRpb24iOiAiUGljdHVyZXMgUmVxdWlyaW5nIEF0dHJpYnV0aW9uOiBHb3Zlcm5tZW50IG9mIEtpcmliYXRpOiBodHRwczovL2NvbW1vbnMud2lraW1lZGlhLm9yZy93aWtpL0ZpbGU6S3VyaWFfZGFuY2Vycy4iLAogICAgICAgICJ0aHVtYm5haWxzIjogewogICAgICAgICAgImRlZmF1bHQiOiB7CiAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS80MDRMV3FuUWhLby9kZWZhdWx0LmpwZyIsCiAgICAgICAgICAgICJ3aWR0aCI6IDEyMCwKICAgICAgICAgICAgImhlaWdodCI6IDkwCiAgICAgICAgICB9LAogICAgICAgICAgIm1lZGl1bSI6IHsKICAgICAgICAgICAgInVybCI6ICJodHRwczovL2kueXRpbWcuY29tL3ZpLzQwNExXcW5RaEtvL21xZGVmYXVsdC5qcGciLAogICAgICAgICAgICAid2lkdGgiOiAzMjAsCiAgICAgICAgICAgICJoZWlnaHQiOiAxODAKICAgICAgICAgIH0sCiAgICAgICAgICAiaGlnaCI6IHsKICAgICAgICAgICAgInVybCI6ICJodHRwczovL2kueXRpbWcuY29tL3ZpLzQwNExXcW5RaEtvL2hxZGVmYXVsdC5qcGciLAogICAgICAgICAgICAid2lkdGgiOiA0ODAsCiAgICAgICAgICAgICJoZWlnaHQiOiAzNjAKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJjaGFubmVsVGl0bGUiOiAiTXIgSGlzdG9yeSIsCiAgICAgICAgImxpdmVCcm9hZGNhc3RDb250ZW50IjogIm5vbmUiLAogICAgICAgICJwdWJsaXNoVGltZSI6ICIyMDIxLTA3LTMxVDIxOjI2OjE4WiIKICAgICAgfQogICAgfSwKICAgIHsKICAgICAgImtpbmQiOiAieW91dHViZSNzZWFyY2hSZXN1bHQiLAogICAgICAiZXRhZyI6ICJoNHBIeWdfdkVNVUxpYmtPbENLSXhJZDN1ZEkiLAogICAgICAiaWQiOiB7CiAgICAgICAgImtpbmQiOiAieW91dHViZSN2aWRlbyIsCiAgICAgICAgInZpZGVvSWQiOiAiczMxeW1Wek9mR1kiCiAgICAgIH0sCiAgICAgICJzbmlwcGV0IjogewogICAgICAgICJwdWJsaXNoZWRBdCI6ICIyMDE5LTA5LTI0VDA4OjMxOjMzWiIsCiAgICAgICAgImNoYW5uZWxJZCI6ICJVQ2x1UTV5SW5iZUFra2VDbmROblVocHciLAogICAgICAgICJ0aXRsZSI6ICIxNSBUaGluZ3MgTm90IEZyb20gdGhlIENvdW50cnkgWW91IFRoaW5rIiwKICAgICAgICAiZGVzY3JpcHRpb24iOiAiTXJIaXN0b3J5LiIsCiAgICAgICAgInRodW1ibmFpbHMiOiB7CiAgICAgICAgICAiZGVmYXVsdCI6IHsKICAgICAgICAgICAgInVybCI6ICJodHRwczovL2kueXRpbWcuY29tL3ZpL3MzMXltVnpPZkdZL2RlZmF1bHQuanBnIiwKICAgICAgICAgICAgIndpZHRoIjogMTIwLAogICAgICAgICAgICAiaGVpZ2h0IjogOTAKICAgICAgICAgIH0sCiAgICAgICAgICAibWVkaXVtIjogewogICAgICAgICAgICAidXJsIjogImh0dHBzOi8vaS55dGltZy5jb20vdmkvczMxeW1Wek9mR1kvbXFkZWZhdWx0LmpwZyIsCiAgICAgICAgICAgICJ3aWR0aCI6IDMyMCwKICAgICAgICAgICAgImhlaWdodCI6IDE4MAogICAgICAgICAgfSwKICAgICAgICAgICJoaWdoIjogewogICAgICAgICAgICAidXJsIjogImh0dHBzOi8vaS55dGltZy5jb20vdmkvczMxeW1Wek9mR1kvaHFkZWZhdWx0LmpwZyIsCiAgICAgICAgICAgICJ3aWR0aCI6IDQ4MCwKICAgICAgICAgICAgImhlaWdodCI6IDM2MAogICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgImNoYW5uZWxUaXRsZSI6ICJNciBIaXN0b3J5IiwKICAgICAgICAibGl2ZUJyb2FkY2FzdENvbnRlbnQiOiAibm9uZSIsCiAgICAgICAgInB1Ymxpc2hUaW1lIjogIjIwMTktMDktMjRUMDg6MzE6MzNaIgogICAgICB9CiAgICB9LAogICAgewogICAgICAia2luZCI6ICJ5b3V0dWJlI3NlYXJjaFJlc3VsdCIsCiAgICAgICJldGFnIjogIlpqdjlGdlBfZk0wZU1feDJZZ05JckRMdjVZUSIsCiAgICAgICJpZCI6IHsKICAgICAgICAia2luZCI6ICJ5b3V0dWJlI3ZpZGVvIiwKICAgICAgICAidmlkZW9JZCI6ICJPMVk4YzNOeDY3OCIKICAgICAgfSwKICAgICAgInNuaXBwZXQiOiB7CiAgICAgICAgInB1Ymxpc2hlZEF0IjogIjIwMjAtMDYtMTFUMDU6MTE6MDdaIiwKICAgICAgICAiY2hhbm5lbElkIjogIlVDbHVRNXlJbmJlQWtrZUNuZE5uVWhwdyIsCiAgICAgICAgInRpdGxlIjogIkEgU3VwZXIgUXVpY2sgSGlzdG9yeSBvZiBFdGhpb3BpYSIsCiAgICAgICAgImRlc2NyaXB0aW9uIjogIlNvdXJjZXM6IOKAnEEgSGlzdG9yeSBvZiBFdGhpb3BpYeKAnSBieSBTYWhlZWQgQS4gQWRlanVtb2JpICgyMDA3KSBHcmVlbndvb2QgUHJlc3MsIFdlc3Rwb3J0LCBDVC4iLAogICAgICAgICJ0aHVtYm5haWxzIjogewogICAgICAgICAgImRlZmF1bHQiOiB7CiAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9PMVk4YzNOeDY3OC9kZWZhdWx0LmpwZyIsCiAgICAgICAgICAgICJ3aWR0aCI6IDEyMCwKICAgICAgICAgICAgImhlaWdodCI6IDkwCiAgICAgICAgICB9LAogICAgICAgICAgIm1lZGl1bSI6IHsKICAgICAgICAgICAgInVybCI6ICJodHRwczovL2kueXRpbWcuY29tL3ZpL08xWThjM054Njc4L21xZGVmYXVsdC5qcGciLAogICAgICAgICAgICAid2lkdGgiOiAzMjAsCiAgICAgICAgICAgICJoZWlnaHQiOiAxODAKICAgICAgICAgIH0sCiAgICAgICAgICAiaGlnaCI6IHsKICAgICAgICAgICAgInVybCI6ICJodHRwczovL2kueXRpbWcuY29tL3ZpL08xWThjM054Njc4L2hxZGVmYXVsdC5qcGciLAogICAgICAgICAgICAid2lkdGgiOiA0ODAsCiAgICAgICAgICAgICJoZWlnaHQiOiAzNjAKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJjaGFubmVsVGl0bGUiOiAiTXIgSGlzdG9yeSIsCiAgICAgICAgImxpdmVCcm9hZGNhc3RDb250ZW50IjogIm5vbmUiLAogICAgICAgICJwdWJsaXNoVGltZSI6ICIyMDIwLTA2LTExVDA1OjExOjA3WiIKICAgICAgfQogICAgfQogIF0KfQo=
-  recorded_at: Sat, 12 Nov 2022 04:43:40 GMT
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "1zzKjzZDn1bh3CTTNSq3tqaGjZw",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 60,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "fZrxYep3SpOL2SRZRaridMLJhZ8",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "DD4wjwaFU-U"
+              },
+              "snippet": {
+                "publishedAt": "2021-05-07T03:20:53Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "A Super Quick History of Italy",
+                "description": "Sources: \"A Brief History of Italy\" (2018) by Jeremy Black. Robinson Publishing, London. \"The Pursuit of Italy: A History of its ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/DD4wjwaFU-U/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/DD4wjwaFU-U/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/DD4wjwaFU-U/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-05-07T03:20:53Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "HSKuwu0Ix8lVCIlQZAx1fsqCt4E",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "GXww65SCZ1s"
+              },
+              "snippet": {
+                "publishedAt": "2020-01-05T21:10:15Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "A Super Quick History of Croatia",
+                "description": "Pictures Requiring Attribution: Electrideodes: https://commons.wikimedia.org/wiki/File:Monkodonja4.JPG MaryroseB54: ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/GXww65SCZ1s/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/GXww65SCZ1s/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/GXww65SCZ1s/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-01-05T21:10:15Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "fopco4RD_xDvn8w95sRH5I3dxSQ",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLVRhJQ5GttaJJo5HY1JcEVihUpSV6fz5o"
+              },
+              "snippet": {
+                "publishedAt": "2019-08-02T20:36:34Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "Super Quick Histories!",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-08-02T20:36:34Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "h4pHyg_vEMULibkOlCKIxId3udI",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "s31ymVzOfGY"
+              },
+              "snippet": {
+                "publishedAt": "2019-09-24T08:31:33Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "15 Things Not From the Country You Think",
+                "description": "MrHistory.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/s31ymVzOfGY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/s31ymVzOfGY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/s31ymVzOfGY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-09-24T08:31:33Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "Qb0yayFCg10mtX4njVWtg4upN3c",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "404LWqnQhKo"
+              },
+              "snippet": {
+                "publishedAt": "2021-07-31T21:26:18Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "A Super Quick History of Kiribati",
+                "description": "Pictures Requiring Attribution: Government of Kiribati: https://commons.wikimedia.org/wiki/File:Kuria_dancers.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/404LWqnQhKo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/404LWqnQhKo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/404LWqnQhKo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-07-31T21:26:18Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Mon, 14 Nov 2022 20:33:49 GMT
 recorded_with: VCR 6.1.0
