@@ -11,6 +11,6 @@ class CountryFacade
   end
 
   def self.valid_country?(country)
-    country_names.include?(country.downcase.titleize) || country == ''
+    country_names.include?(country.downcase.titleize)
   end
 end

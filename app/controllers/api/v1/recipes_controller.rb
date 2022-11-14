@@ -5,7 +5,7 @@ class Api::V1::RecipesController < ApplicationController
       recipes = RecipeFacade.get_recipes(country)
       render json: RecipeSerializer.serialize(recipes)
     else
-      render status: 404
+      render json: ErrorSerializer.invalid_country, status: 404
     end
   end
 end

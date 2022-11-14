@@ -5,7 +5,7 @@ class Api::V1::LearningResourcesController < ApplicationController
       learning_resources = LearningResourceFacade.get_resources(country)
       render json: LearningResourceSerializer.serialize(learning_resources, country)
     else
-      render status: 404
+      render json: ErrorSerializer.invalid_country, status: 404
     end
   end
 end

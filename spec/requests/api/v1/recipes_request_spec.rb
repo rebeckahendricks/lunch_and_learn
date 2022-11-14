@@ -66,17 +66,6 @@ RSpec.describe 'Recipes API' do
   end
 
   describe 'Sad Path', :vcr do
-    describe 'if a country parameter is an empty string' do
-      it 'sends an empty array' do
-        get '/api/v1/recipes?country='
-        recipes = JSON.parse(response.body, symbolize_names: true)
-
-        expect(response).to be_successful
-        expect(recipes[:data]).to be_an Array
-        expect(recipes[:data]).to be_empty
-      end
-    end
-
     describe 'if a valid country parameter does not return any recipes' do
       it 'sends an empty array' do
         get '/api/v1/recipes?country=vatican city'
@@ -85,6 +74,15 @@ RSpec.describe 'Recipes API' do
         expect(response).to be_successful
         expect(recipes[:data]).to be_an Array
         expect(recipes[:data]).to be_empty
+      end
+    end
+
+    describe 'if a country parameter is an empty string' do
+      it 'sends an empty array' do
+        get '/api/v1/recipes?country='
+
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(404)
       end
     end
 
