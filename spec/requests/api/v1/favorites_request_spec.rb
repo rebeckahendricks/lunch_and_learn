@@ -185,4 +185,21 @@ RSpec.describe 'Favorites Request API' do
       end
     end
   end
+
+  describe 'Delete Favorites' do
+    it 'can destroy a users favorite' do
+      user = create(:user)
+      user.generate_api_key
+      favorite = create(:favorite, user_id: user.id)
+
+      expect(User.last).to eq(user)
+      expect(user.favorites.last).to eq(favorite)
+
+      delete "/api/v1/favorite/#{favorite.id}"
+
+      expect(response).to be_successful
+      expect(user.favorites.last).to_not eq(favorite)
+      expect { Favorite.find(favorite.id) }.to raise_error(ActiveRecord::RecordNotFound)
+    end
+  end
 end
