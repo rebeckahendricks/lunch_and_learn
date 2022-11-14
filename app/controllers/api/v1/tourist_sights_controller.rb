@@ -3,7 +3,6 @@ class Api::V1::TouristSightsController < ApplicationController
     country = params[:country]
     lat, long = CountryFacade.capital_lat_long(country)
     sights = PlacesFacade.get_tourist_sights(lat, long)
-    binding.pry
-    TouristSightsSerializer.new(sights)
+    render json: TouristSightSerializer.serialize(sights)
   end
 end
