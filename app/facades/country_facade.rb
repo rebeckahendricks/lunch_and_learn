@@ -8,7 +8,7 @@ class CountryFacade
   end
 
   def self.capital_lat_long(country)
-    data = CountryService.get_countries
-    binding.pry
+    data = CountryService.get_country_info(country)
+    data[0][:latlng]
   end
 end

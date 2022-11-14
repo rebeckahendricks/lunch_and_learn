@@ -2,8 +2,8 @@ require 'faraday'
 require 'json'
 
 class PlacesService
-  def self.get_places(lat, lon)
-    response = conn.get('/v2/places', { categories: 'tourism.sights', filter: "circle:#{lon},#{lat},20000" })
+  def self.get_places(lat, long)
+    response = conn.get('/v2/places', { categories: 'tourism.sights', filter: "circle:#{long},#{lat},20000" })
     parse(response)
   end
 

@@ -21,6 +21,8 @@ RSpec.describe CountryService do
     expect(search).to be_an Array
     expect(search[0]).to be_a Hash
     expect(search[0]).to have_key :latlng
-    ex
+    expect(search[0][:latlng]).to be_an Array
+    expect(search[0][:latlng][0]).to be_a Float
+    expect(search[0][:latlng][1]).to be_a Float
   end
 end
