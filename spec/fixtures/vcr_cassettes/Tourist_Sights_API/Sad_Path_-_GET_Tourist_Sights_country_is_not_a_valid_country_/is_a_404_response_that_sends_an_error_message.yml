@@ -19,7 +19,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Mon, 14 Nov 2022 18:39:57 GMT
+      - Mon, 14 Nov 2022 18:51:23 GMT
       Server:
       - Apache/2.4.38 (Debian)
       Content-Type:
@@ -29,7 +29,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"status":404,"message":"Not Found"}'
-  recorded_at: Mon, 14 Nov 2022 18:39:57 GMT
+  recorded_at: Mon, 14 Nov 2022 18:51:23 GMT
 - request:
     method: get
     uri: https://api.geoapify.com/v2/places?apiKey=02cee7aca693487fb24a852db5d45f9b&categories=tourism.sights&filter=circle:,,20000
@@ -49,7 +49,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Mon, 14 Nov 2022 18:42:11 GMT
+      - Mon, 14 Nov 2022 18:51:24 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -78,18 +78,18 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=c0CyUv5HNXfvKbaOF%2BVXUZ9Kca0%2FoooQHUzWazPHjkC1C5%2F0%2F7fx2dsjzuQ%2Fg1m9Bbz7iFj8a65PpZMHUHiEjxxk8ms5ZyCM527PfWTmanFe3XjrdP7HA4xzpFlYxOLP6je5aJnBNo9eLT16YqI%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lfWGFklgoeCjgJMjCQ%2FeGNMQTg2fT2iz8Mpm%2FITjgt134LrjSD2VywTZ1LwJoJYrPrhenVtvsb9KQ%2FdWpbBN5cZAZJSSBXAu8CSpn8%2Bc85BwFiSuLLt35nAaMvOPWFJOLGfSYSIh5IPUpYPXU2I%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 76a1e2b448898764-ORD
+      - 76a1f0333e1e2cf5-ORD
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
       string: '{"statusCode":400,"error":"Bad Request","message":"\"filter[0]\" does
         not match any of the allowed types"}'
-  recorded_at: Mon, 14 Nov 2022 18:42:11 GMT
+  recorded_at: Mon, 14 Nov 2022 18:51:24 GMT
 recorded_with: VCR 6.1.0

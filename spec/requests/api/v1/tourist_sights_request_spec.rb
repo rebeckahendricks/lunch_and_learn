@@ -67,7 +67,7 @@ RSpec.describe 'Tourist Sights API' do
 
   describe 'Happy Path - GET Tourist Sights (country name has spaces)', :vcr do
     before :each do
-      country = 'New%20Zealand'
+      country = 'New Zealand'
       get "/api/v1/tourist_sights?country=#{country}"
       @sights = JSON.parse(response.body, symbolize_names: true)
     end

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 14 Nov 2022 18:23:33 GMT
+      - Mon, 14 Nov 2022 18:51:25 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -37,9 +37,9 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=15552001
       X-Request-Id:
-      - 3ee9912ea928deba57b5fb0b018e6cda
+      - 415e76ebe1313d34b5b9351b6368e65b
     body:
       encoding: UTF-8
       string: '{"from":1,"to":0,"count":0,"_links":{},"hits":[]}'
-  recorded_at: Mon, 14 Nov 2022 18:23:33 GMT
+  recorded_at: Mon, 14 Nov 2022 18:51:25 GMT
 recorded_with: VCR 6.1.0
