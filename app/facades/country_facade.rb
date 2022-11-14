@@ -8,7 +8,7 @@ class CountryFacade
   end
 
   def self.capital_lat_long(country)
-    data = self.random_country
+    data = CountryService.get_countries
     binding.pry
   end
 end

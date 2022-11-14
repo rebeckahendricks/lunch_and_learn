@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Tourist Sights API' do
-  describe 'Happy Path - GET Tourist Sights within 20000m of the capital city of a given country' do
+  describe 'Happy Path - GET Tourist Sights within 20000m of the capital city of a given country', :vcr do
     before :each do
       country = 'France'
       get "/api/v1/tourist_sights?country=#{country}"
@@ -22,8 +22,14 @@ RSpec.describe 'Tourist Sights API' do
         expect(sight).to have_key :attributes
         expect(sight[:id]).to eq('null')
         expect(sight[:type]).to eq('tourist_sight')
-        expect(sight[:attributes])
+        expect(sight[:attributes]).to be_a Hash
+        expect(sight[:attributes]).to have_key :name
+        expect(sight[:attributes]).to have_key :address
+        expect(sight[:attributes]).to have_key :place_id
+        expect(sight[:attributes][:name]).to be_a String
+        expect(sight[:attributes][:address]).to be_a String
+        expect(sight[:attributes][:place_id]).to be_a String
       end
     end
   end
-end 
+end

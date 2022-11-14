@@ -13,4 +13,14 @@ RSpec.describe CountryService do
       expect(country[:name][:common]).to be_a String
     end
   end
+
+  it 'returns information about a specific country' do
+    country = 'France'
+    search = CountryService.get_country_info(country)
+
+    expect(search).to be_an Array
+    expect(search[0]).to be_a Hash
+    expect(search[0]).to have_key :latlng
+    ex
+  end
 end
