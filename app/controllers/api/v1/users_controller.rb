@@ -11,6 +11,15 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def login
+    user = User.find_by(email: user_params[:email])
+    if user && user.authenticate(user_params[:password])
+      render json: UserSerializer.new(user)
+    else
+      render json: ErrorSerializer.invalid_login, status: 400
+    end
+  end
+
   private
 
   def user_params
