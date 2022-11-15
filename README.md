@@ -243,4 +243,22 @@ Accept: application/json
       "success": 'Favorite deleted successfully'
     }
 ```
+3) Implement basic authentication:
+    - Registration requires password and password confirmation
+    - Use of bcrypt gem to authenticate and encrypt password for a new user
+    - Implements login functionality
+    - Example Response for Registering/Logging in: 
+    ```
+      {
+    "data": {
+      "type": "user",
+      "id": "1",
+      "attributes": {
+        "name": "Odell",
+        "email": "goodboy@ruffruff.com",
+        "api_key": "asjdflkn2lk3nsdjfl4243jk7"
+      }
+    }
+  }
+    ```
 

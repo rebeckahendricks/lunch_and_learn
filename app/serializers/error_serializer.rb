@@ -33,4 +33,18 @@ class ErrorSerializer
       "error": 'Favorite not found'
     }
   end
+
+  def self.password_confirmation
+    {
+      "message": 'User could not be created',
+      "error": 'Password and password confirmation must match'
+    }
+  end
+
+  def self.invalid_login
+    {
+      "message": 'User could not be logged in',
+      "error": 'Email and/or password are incorrect'
+    }
+  end
 end
