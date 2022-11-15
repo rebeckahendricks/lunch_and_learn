@@ -153,18 +153,57 @@ RSpec.describe 'Users Request API' do
 
   describe 'Sad Path - Logging in a User' do
     describe 'User email does not exist' do
-      # user1 = create(:user)
-      # user1.generate_api_key
+      it 'has an unsuccessful response and sends the user an error message' do
+        user1 = create(:user)
+        user1.generate_api_key
 
-      # user_params = {
-      #   name: user1.name,
-      #   email: user1.email,
-      #   password: user1.password
-      # }
+        user_params = {
+          email: 'differentemail@gmail.com',
+          password: user1.password
+        }
+
+        headers = { 'CONTENT_TYPE' => 'application/json' }
+
+        post "/api/v1/users/#{user1.id}/login", headers: headers, params: JSON.generate(user: user_params)
+
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(400)
+
+        user_response = JSON.parse(response.body, symbolize_names: true)
+        expected_error_hash = {
+          "message": 'User could not be logged in',
+          "error": 'Email and/or password are incorrect'
+        }
+
+        expect(user_response).to eq(expected_error_hash)
+      end
     end
 
     describe 'Password is incorrect' do
-      
+      it 'has an unsuccessful response and sends the user an error message' do
+        user1 = create(:user)
+        user1.generate_api_key
+
+        user_params = {
+          email: user1.email,
+          password: 'incorrectpassword'
+        }
+
+        headers = { 'CONTENT_TYPE' => 'application/json' }
+
+        post "/api/v1/users/#{user1.id}/login", headers: headers, params: JSON.generate(user: user_params)
+
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(400)
+
+        user_response = JSON.parse(response.body, symbolize_names: true)
+        expected_error_hash = {
+          "message": 'User could not be logged in',
+          "error": 'Email and/or password are incorrect'
+        }
+
+        expect(user_response).to eq(expected_error_hash)
+      end
     end
   end
 end

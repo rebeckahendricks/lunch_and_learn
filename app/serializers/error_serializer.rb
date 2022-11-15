@@ -40,4 +40,11 @@ class ErrorSerializer
       "error": 'Password and password confirmation must match'
     }
   end
+
+  def self.invalid_login
+    {
+      "message": 'User could not be logged in',
+      "error": 'Email and/or password are incorrect'
+    }
+  end
 end
