@@ -12,7 +12,7 @@ RSpec.describe 'Users Request API' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      post '/api/v1/users', headers: headers, params: JSON.generate(user: user_params)
+      post '/api/v1/users', headers: headers, params: JSON.generate(user_params)
 
       expect(response).to be_successful
       expect(response).to have_http_status(201)
@@ -56,7 +56,7 @@ RSpec.describe 'Users Request API' do
 
         headers = { 'CONTENT_TYPE' => 'application/json' }
 
-        post '/api/v1/users', headers: headers, params: JSON.generate(user: user_params)
+        post '/api/v1/users', headers: headers, params: JSON.generate(user_params)
       end
 
       it 'does not create a new user' do
@@ -91,7 +91,7 @@ RSpec.describe 'Users Request API' do
 
         headers = { 'CONTENT_TYPE' => 'application/json' }
 
-        post '/api/v1/users', headers: headers, params: JSON.generate(user: user_params)
+        post '/api/v1/users', headers: headers, params: JSON.generate(user_params)
       end
 
       it 'does not create a new user' do
@@ -126,7 +126,7 @@ RSpec.describe 'Users Request API' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      post "/api/v1/users/#{user1.id}/login", headers: headers, params: JSON.generate(user: user_params)
+      post '/api/v1/users/login', headers: headers, params: JSON.generate(user_params)
 
       expect(response).to be_successful
       expect(response).to have_http_status(200)
@@ -164,7 +164,7 @@ RSpec.describe 'Users Request API' do
 
         headers = { 'CONTENT_TYPE' => 'application/json' }
 
-        post "/api/v1/users/#{user1.id}/login", headers: headers, params: JSON.generate(user: user_params)
+        post '/api/v1/users/login', headers: headers, params: JSON.generate(user_params)
 
         expect(response).to_not be_successful
         expect(response).to have_http_status(400)
@@ -191,7 +191,7 @@ RSpec.describe 'Users Request API' do
 
         headers = { 'CONTENT_TYPE' => 'application/json' }
 
-        post "/api/v1/users/#{user1.id}/login", headers: headers, params: JSON.generate(user: user_params)
+        post '/api/v1/users/login', headers: headers, params: JSON.generate(user_params)
 
         expect(response).to_not be_successful
         expect(response).to have_http_status(400)
