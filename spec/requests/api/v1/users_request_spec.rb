@@ -2,10 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'Users Request API' do
   describe 'Happy Path' do
-    it 'creates a user' do
+    it 'creates/registers a user' do
       user_params = {
         name: Faker::Name.name,
-        email: Faker::Internet.email
+        email: Faker::Internet.email,
+        password: 'password123',
+        password_confirmation: 'password123'
       }
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
@@ -47,7 +49,9 @@ RSpec.describe 'Users Request API' do
 
         user_params = {
           name: Faker::Name.name,
-          email: 'same@gmail.com'
+          email: 'same@gmail.com',
+          password: 'password123',
+          password_confirmation: 'password123'
         }
 
         headers = { 'CONTENT_TYPE' => 'application/json' }
@@ -68,6 +72,41 @@ RSpec.describe 'Users Request API' do
         expected_error_hash = {
           "message": 'User could not be created',
           "error": 'Email already exists'
+        }
+
+        expect(user_response).to eq(expected_error_hash)
+      end
+    end
+
+    describe 'password and password confirmation do not match' do
+      before :each do
+        @user1 = create(:user)
+
+        user_params = {
+          name: Faker::Name.name,
+          email: Faker::Internet.email,
+          password: 'password123',
+          password_confirmation: 'notthesame'
+        }
+
+        headers = { 'CONTENT_TYPE' => 'application/json' }
+
+        post '/api/v1/users', headers: headers, params: JSON.generate(user: user_params)
+      end
+
+      it 'does not create a new user' do
+        expect(response).to_not be_successful
+        expect(response).to have_http_status(400)
+
+        expect(User.last.name).to eq(@user1.name)
+      end
+
+      it 'returns an error message in the response' do
+        user_response = JSON.parse(response.body, symbolize_names: true)
+
+        expected_error_hash = {
+          "message": 'User could not be created',
+          "error": 'Password and password confirmation must match'
         }
 
         expect(user_response).to eq(expected_error_hash)
